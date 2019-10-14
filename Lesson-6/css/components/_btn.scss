@@ -1,0 +1,42 @@
+.buttons {
+    width: 100%;
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    a + a {
+        margin-left: 15px;
+    }
+
+    @media (max-width: 778px) {
+        margin-top: 30px;
+    }
+}
+
+.btn {
+    color: #000;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+
+    padding: 10px 20px;
+    border: 1px solid #99a1b3;
+    border-radius: 5px;
+
+    &:active {
+        transform: scale(0.8);
+    }
+
+    & .fa-angle-left {
+        padding-right: 6px;
+    }
+
+    & .fa-angle-right {
+        padding-left: 6px;
+    }
+
+    @media (max-width: 778px) {
+        padding: 7px 15px;
+    }
+}

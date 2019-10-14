@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: sans-serif;
+    min-width: 320px;
+    background-color: #f2f4f8;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+a {
+    color: none;
+    text-decoration: none;
+}
