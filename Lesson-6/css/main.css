@@ -62,7 +62,7 @@ html {
 
 body {
   font-family: sans-serif;
-  min-width: 320px;
+  min-width: 500px;
   background-color: #f2f4f8;
   height: 100vh;
   display: -webkit-box;
@@ -401,21 +401,13 @@ a {
   }
 }
 
-.section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .section + .section {
   margin-top: 30px;
 }
 
 .section a {
   display: block;
-  padding: 8px 25px 8px 25px;
+  padding: 25px 25px 8px 25px;
   margin-top: 8px;
   color: #99a1b3;
   border-left: 5px solid transparent;
