@@ -11,7 +11,7 @@ Animal.prototype._formatFoodAmount = function () {
 };
 
 Animal.prototype.feed = function () {
-    console.log('Насыпаем в миску ' + this._formatFoodAmount() + ' корма.');
+    console.log('Насыпаем в миску ' + this._self.dailyNorm() + ' корма.');
 }
 
 Animal.prototype.dailyNorm = function (amount) {
@@ -28,7 +28,7 @@ Animal.prototype.dailyNorm = function (amount) {
 function Cat(name) {
     Animal.apply(this, arguments);
 
-    this._animalFood = Animal.prototype.feed.bind(this._self);
+    this._animalFood = Animal.prototype.feed;
 
 }
 
