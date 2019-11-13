@@ -2,15 +2,9 @@
 var arrOfNames = ['Vasya', 'Alex', 'Val9I'];
 
 function getArrOfNames(arrOfNames) {
-    var newArr = arrOfNames.map(function (names) {
-        var newObj = {};
-        newObj.name = names
-
-        return newObj;
+    return arrOfNames.map(function (names) {
+        return { name: names };
     });
-
-    return newArr;
-
 }
 
 console.log(getArrOfNames(arrOfNames));
@@ -75,7 +69,7 @@ console.log(breakText(newText));
 
 //5
 
-var newVal = 'Я пришел сюда один, один и уйду!!';
+var newVal = 'Я пришел, пришел, пришел сюда один, один и уйду!!';
 
 
 function showReps(str) {
@@ -90,10 +84,11 @@ function showReps(str) {
         result[el] = result[el] + 1 || 1;
     });
 
-    for (var key in result) {
-        console.log('Максимальное число повторений у слова ' + '"' + key + '"' + ' - ' + result[key]);
-    }
+    var maxNumOfRep = Object.keys(result).reduce(function (el, ind) {
+        return result[el] > result[ind] ? el : ind;
+    });
 
+    console.log('Максимальное число повторений у слова ' + "'" + maxNumOfRep + "'" + ' - ' + result[maxNumOfRep]);
 
 }
 
