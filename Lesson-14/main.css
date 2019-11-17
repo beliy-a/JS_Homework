@@ -1,0 +1,53 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form button {
+    margin-top: 10px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.form_group + .form_group {
+    margin-top: 10px;
+}
+
+.form_group label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+}
+
+
+#chessBoard {
+    margin-top: 20px;
+    font-size: 0;
+    border: 1px solid black;
+}
+
+#chessBoard span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+#chessBoard .chess_black {
+    background-color: black;
+}
+
+
+
