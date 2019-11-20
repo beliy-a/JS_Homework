@@ -83,6 +83,8 @@ function showChessBoard(val1, val2) {
             row.appendChild(rowEl);
         }
     }
+
+    btn.setAttribute('disabled', 'disabled');
 }
 
 
