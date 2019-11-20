@@ -16,7 +16,7 @@ btn.addEventListener('click', function (e) {
     var inpNumY = +inpY.value;
 
 
-    if (inpNumX < 1 || inpNumX > 10 || isNaN(inpNumX)) {
+    if (inpNumX < 1 || inpNumX > 10 || isNaN(inpNumX) || inpNumX == undefined) {
         alert('Введите корректное число X: 1-10');
         inpX.value = '';
         btn.setAttribute('disabled', 'disabled');
@@ -24,7 +24,7 @@ btn.addEventListener('click', function (e) {
         var inpResX = inpNumX;
     }
 
-    if (inpNumY < 1 || inpNumY > 10 || isNaN(inpNumY)) {
+    if (inpNumY < 1 || inpNumY > 10 || isNaN(inpNumY) || inpNumY == undefined) {
         alert('Введите корректное число Y: 1-10');
         inpY.value = '';
         btn.setAttribute('disabled', 'disabled');
@@ -61,15 +61,14 @@ function checkInputs() {
         btn.setAttribute('disabled', 'disabled');
     }
 
-    if (inpXVal.trim().length == 0 || inpYVal.trim().length == 0) {
-        chessBoard.innerHTML = '';
-    }
-
 }
 
 function showChessBoard(val1, val2) {
+    if (val1 == undefined || val2 == undefined) return;
+
     var x = val1;
     var y = val2;
+    chessBoard.innerHTML = '';
 
     for (var i = 0; i < y; i++) {
         var row = chessBoard.appendChild(document.createElement('div'));
@@ -85,6 +84,8 @@ function showChessBoard(val1, val2) {
     }
 
     btn.setAttribute('disabled', 'disabled');
+    inpX.value = '';
+    inpY.value = '';
 }
 
 
